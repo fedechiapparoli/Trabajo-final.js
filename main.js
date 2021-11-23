@@ -22,16 +22,11 @@ const arraysPrestamos=[
               .delay(2000)
               .animate({opacity: '1'}, 2000)
 
-              //Traigo array desde json
-
- //const urljson =  "productos.json"              
-// $.get(urljson, (response) => {                 
+     //  Agrego cards y botones                     
     arraysPrestamos.forEach(prestamo => {
      // LocalStorage Array 
       const guardarLS = localStorage.setItem('arrays',JSON.stringify (arraysPrestamos))
-     JSON.parse(localStorage.getItem('arrays'))  
-   
-        //Agrego Cards y boton
+     JSON.parse(localStorage.getItem('arrays'))        
 
 $('#contenedor').append( `
 <div class="card my-3"  style="width: 16rem;">
@@ -89,7 +84,7 @@ $('#contenedor').append( `
       console.log(cliente1);
      mostrarCliente(cliente1);
     }
-    //cargarCliente()
+   
     
     
 
