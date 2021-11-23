@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding-left: 0;
+    box-sizing: border-box; 
+}
+header {
+    width: 100%;
+    background-color: #b4c3cc;
+  }
+  header nav li:hover {
+    background-color: #d1d1e2;
+    color: black;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  header nav li a {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: black;
+  }
+  header nav .te-logo {
+    width: 6rem;
+    background-color: #b4c3cc;
+  }
+   .separar{
+      margin-top: 3rem;
+      
+  }
+  /*Animacion*/
+  .titulo{
+    color: rgb(15, 15, 53);
+   margin-top: 1.5rem;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+ /* .modal-bg{
+   position: fixed;
+   top: 0;
+   left: 0;
+  visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .modal{
+    background-color: white;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .bg-active{
+    visibility: hidden;
+    opacity: 0;
+  }/*
+.modal-close{
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+}*/
+  /*
+  .celda {
+    padding-top: 20px;
+    margin-top: 4px;
+    border-radius: 5px;
+  }/*
+  .button {
+    background-color:grey;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 4px;
+    box-shadow: rgb(66, 70, 66);
+    border-radius: 5px;
+    font-weight: bold;
+  }*/
+  .column-1 {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+   
+    
+  }/*
+  .form {
+    display: flex;
+    justify-content: center;
+    font-size: 1 rem;
+    margin: 1 rem;
+  }*/
+  .contact {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px;
+    margin: 20px;
+    background-color: antiquewhite;
+    border-radius: 50px;
+  }
+  
