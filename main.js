@@ -62,6 +62,10 @@ $('#contenedor').append( `
     }
     //  Cargar cliente al formulario
     function cargarCliente() {
+      //let parrafo = document.getElementById("warning")
+     // let form = document.getElementById("form")
+     let reMedio = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/
+     let error =document.getElementById('error').value;
       let nombre = document.getElementById("name").value;
       let apellido = document.getElementById("apellido").value;
       let direccion = document.getElementById("adress").value;
@@ -81,37 +85,149 @@ $('#contenedor').append( `
       localStorage.getItem('telefono');
       localStorage.setItem('dni', dni);
       localStorage.getItem('dni');
+      
+     
+      if(nombre === "" || apellido === "" || direccion === "" || mail === "" || dni ==="" || telefono === "") {
+        //alert("Todos los campos son obligatorios");
+       document.getElementById('error').innerHTML = "Llenar todos los campos"
+        return false;
+         
+       } else if(nombre.length > 30){
+       // alert("El nombre es muy largo");
+       document.getElementById('error').innerHTML = "El nombre es muy largo"
+         return false;
+       } else if(apellido.length > 40){
+         //alert("El apellido es muy largo");
+         document.getElementById('error').innerHTML ="El apellido es muy largo"
+         return false;
+       } else if(direccion.length > 40){
+         document.getElementById('error').innerHTML = "La dirección es muy larga"
+        // alert("La dirección es muy larga");
+        
+        return false;
+       } else if(!reMedio. test(mail)){
+         document.getElementById('error').innerHTML = "El mail no es valido"
+         //alert("El mail es muy largo");
+         
+         return false;
+       } else if(telefono.length > 15){
+         document.getElementById('error').innerHTML = "El número de teléfono es muy largo"
+        // alert("El número es muy largo");
+       
+         return false;
+       } else if(dni.length > 10){
+         document.getElementById('error').innerHTML = "El número de DNI es muy largo"
+        // alert("El número es muy largo");
+        
+         return false;
+       } else if(isNaN(telefono)){
+         document.getElementById('error').innerHTML = "No es un número de teléfono"
+         //alert("Teléfono no es un número");
+         
+         return false;
+       } else if(isNaN(dni)){
+        document.getElementById('error').innerHTML = "No es un número de DNI"
+         //alert("El dni solo lleva números");
+         
+         return false;
+       }
+       
+       
+       
+     
+     /* if(nombre === "" || apellido === "" || direccion === "" || mail === "" || dni ==="" || telefono === "") {
+       alert("Todos los campos son obligatorios");
+        return false;
+      } else if(nombre.length > 30){
+        alert("El nombre es muy largo");
+        return false;
+      } else if(apellido.length > 40){
+        alert("El apellido es muy largo");
+        return false;
+      } else if(direccion.length > 40){
+        alert("La dirección es muy larga");
+        return false;
+      } else if(mail.length > 40){
+        alert("El mail es muy largo");
+        return false;
+      } else if(telefono.length > 15){
+        alert("El número es muy largo");
+        return false;
+      } else if(dni.length > 8){
+        alert("El número es muy largo");
+        return false;
+      } else if(isNaN(telefono)){
+        alert("Teléfono no es un número");
+        return false;
+      } else if(isNaN(dni)){
+        alert("El dni solo lleva números");
+        return false;
+      }*/
+     
+      $('.modal-backdrop').remove()
+      $('.modal').removeClass('show')
+    
+    
+
       console.log(cliente1);
      mostrarCliente(cliente1);
     }
+   /* const cerrarModal = document.getElementById('modal-cerrar');
+    const btnSubmit = document.getElementById('btn-submit')
+    cerrarModal.addEventListener('click',() =>{
+     btnSubmit.add(`data-bs-dismiss="modal"`)
+    })*/
+    
+    /*const parrafo = document.getElementById('warning')
+    const form = document.getElementById('form')
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      let warning = ""
+     
+      if(nombre === "" || apellido === "" || direccion === "" || mail === "" || dni ==="" || telefono === "") {
+       warning += `el nombre es invalid`
+         return false;
+       } else if(nombre.length > 30){
+         alert("El nombre es muy largo");
+         return false;
+       } else if(apellido.length > 40){
+         alert("El apellido es muy largo");
+         return false;
+       } else if(direccion.length > 40){
+         alert("La dirección es muy larga");
+         return false;
+       } else if(mail.length > 40){
+         alert("El mail es muy largo");
+         return false;
+       } else if(telefono.length > 15){
+         alert("El número es muy largo");
+         return false;
+       } else if(dni.length > 8){
+         alert("El número es muy largo");
+         return false;
+       } else if(isNaN(telefono)){
+         alert("Teléfono no es un número");
+         return false;
+       } else if(isNaN(dni)){
+         alert("El dni solo lleva números");
+         return false;
+       }
+      
+
+    })*/
+  
    
     
-    
 
     
-    //  Finalizar compra
-   /* let boton = document.getElementById("button-f")
-    boton.addEventListener("click", cargarCliente)
-    function mostrarCliente(cliente) {
-      let formulario = document.getElementById("conteiner");
-      formulario.parentNode.removeChild(formulario);
-
-    let nuevoContenido = document.createElement("div");
- nuevoContenido.innerHTML =`  
-   Hola
-   ${cliente.nombre}
-   !!
-   sus datos se han registrado correctamente, en breve le enviaremos un mail con las condiciones del prestamo a 
-   ${cliente.mail}` ;
- nuevoContenido.className = "contact";
- document.body.appendChild(nuevoContenido);
-}*/
+ 
 
 
 
 //    Finalizar Compra
 
 function mostrarCliente(cliente) { 
+
 
 $('#contact'). append( 
   `  

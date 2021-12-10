@@ -48,29 +48,35 @@
 
 
 <section>
+  <div class="modalCerrar">
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header centrarTitulo">
         <h5 class="modal-title" id="exampleModalLabel">Solicitar Crédito</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class=" form conteiner">
-          <input class="celda" type="text" name="name" id="name" placeholder="Nombre">
-          <input class="celda" type="text" name="apellido" id="apellido" placeholder="Apellido">
-          <input class="celda" type="text" name="adress" id="adress" placeholder="Dirección">
-          <input class="celda" type="text" name="mail" id="mail" placeholder="Ingrese su mail">
-          <input class="celda"  type="text" name="dni" id="dni" placeholder="Ingrese su DNI">
-          <input  class="celda" type="text" name="phone" id="phone" placeholder="Teléfono">
-        
+          <div id="form">
+          <input class="celda" type="text" name="name" id="name" placeholder="Nombre" required>
+          <input class="celda" type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+          <input class="celda" type="text" name="adress" id="adress" placeholder="Dirección" required>
+          <input class="celda" type="email" name="mail" id="mail" placeholder="Ingrese su mail" required>
+          <input class="celda"  type="text" name="dni" id="dni" placeholder="Ingrese su DNI" required>
+          <input  class="celda" type="text" name="phone" id="phone" placeholder="Teléfono" required>
+          
+        </div>
       </div>
       <div class="modal-footer">
+        <h6 id="error" class="error"></h6>
         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-        <button id="button-f" onclick="cargarCliente()" type="button" class="btn btn-success"  data-bs-dismiss="modal">Finalizar</button>
+        <button id="button-f" id="btn-submit" onclick="cargarCliente()" type="submit" class="btn btn-success" >Finalizar</button>
+        
       </div>
     </div>
   </div>
+</div>
 </div>
 </section>
    <section>

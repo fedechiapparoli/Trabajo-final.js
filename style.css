@@ -39,11 +39,14 @@ header {
 }
 
  /* Modal*/
-
+  .centrarTitulo{
+    text-align: center;
+  }
   .celda {
-    padding-top: 20px;
+    padding-top: 5px;
     margin-top: 4px;
     border-radius: 5px;
+    margin: 5px;
   }
   
   .column-1 {
@@ -61,4 +64,7 @@ header {
     background-color: antiquewhite;
     border-radius: 50px;
   }
-  
+ .error{
+   text-align: left;
+   color: red;
+ }
